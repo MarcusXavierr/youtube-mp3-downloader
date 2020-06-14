@@ -14,8 +14,10 @@ if result != 0:
 times = int(input('How many songs do you want to download?: '))
 
 for i in range(times):
-    url = input(f'Please, enter a valid youtube url to video {i + 1}: ')
-    os.system(f'cd $HOME/youtube-musics && youtube-dl {url} -x --audio-format mp3 -v')
-    print(f'Download of music {i + 1} completed')
+    url[i] = input(f'Please, enter a valid youtube url to video {i + 1}: ')
+    
+for x in url:
+    os.system(f'cd $HOME/youtube-musics && youtube-dl {url[x]} -x --audio-format mp3 -v')
+    print(f'Download of music {x + 1} completed')
 
 os.system('xdg-open $HOME/youtube-musics')

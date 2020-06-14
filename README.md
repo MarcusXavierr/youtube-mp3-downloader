@@ -12,4 +12,4 @@
 
 `rm -rf master.zip && cd youtube-mp3-downloader-master/`
 
-`sudo mv ytdownloader /usr/bin`
+`sudo mv ytdownload /usr/bin`

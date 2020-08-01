@@ -18,7 +18,7 @@ while True:
     for i in range(times):
         url = input(f'Please, enter a valid youtube url to video {i + 1}: ')
         urls.append(url)
-    response = input('Do you want download more videos? [y/n]')
+    response = input('Do you want download more videos? [y/n]: ')
     if response.lower() == 'n':
         break
 for x in range(len(urls)):

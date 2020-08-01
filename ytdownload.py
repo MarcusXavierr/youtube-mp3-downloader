@@ -11,14 +11,16 @@ if result != 0:
     os.system('cd $HOME/youtube-musics')
     os.system('echo Directory $HOME/youtube-musics created!')
 
-times = int(input('How many songs do you want to download?: '))
 
 urls = ['']
-
-for i in range(times):
-    url = input(f'Please, enter a valid youtube url to video {i + 1}: ')
-    urls.append(url)
-    
+while True:
+    times = int(input('How many songs do you want to download?: '))
+    for i in range(times):
+        url = input(f'Please, enter a valid youtube url to video {i + 1}: ')
+        urls.append(url)
+    response = input('Do you want download more videos? [y/n]')
+    if response.lower() == 'n':
+        break
 for x in range(len(urls)):
     link = urls[x - 1]   
     os.system(f'cd $HOME/youtube-musics && youtube-dl {link} -x --audio-format mp3 -v')
